@@ -1,0 +1,209 @@
+{
+  "totalActiveTime": 3127461,
+  "sessions": [
+    {
+      "sessionId": "session-1778123601265-gchwcsk0s",
+      "startTime": 1778123601265,
+      "endTime": 1778123901266,
+      "duration": 300001,
+      "aiCharsGenerated": 70,
+      "aiLinesGenerated": 4,
+      "interactionType": "code"
+    },
+    {
+      "sessionId": "session-1778150226959-iqbxpiqlr",
+      "startTime": 1778150226959,
+      "endTime": 1778150559626,
+      "duration": 332667,
+      "aiCharsGenerated": 891,
+      "aiLinesGenerated": 29,
+      "interactionType": "code"
+    },
+    {
+      "sessionId": "session-1778203409550-21iklhdie",
+      "startTime": 1778203409550,
+      "endTime": 1778203773671,
+      "duration": 364121,
+      "aiCharsGenerated": 223,
+      "aiLinesGenerated": 5,
+      "interactionType": "code"
+    },
+    {
+      "sessionId": "session-1778203811228-ux1rhu8oo",
+      "startTime": 1778203811228,
+      "endTime": 1778204111228,
+      "duration": 300000,
+      "aiCharsGenerated": 48,
+      "aiLinesGenerated": 1,
+      "interactionType": "code"
+    },
+    {
+      "sessionId": "session-1778204173571-kmqi4lxs0",
+      "startTime": 1778204173571,
+      "endTime": 1778204473571,
+      "duration": 300000,
+      "aiCharsGenerated": 26,
+      "aiLinesGenerated": 1,
+      "interactionType": "code"
+    },
+    {
+      "sessionId": "session-1778205158218-6lkyk0n2k",
+      "startTime": 1778205158218,
+      "endTime": 1778205756386,
+      "duration": 598168,
+      "aiCharsGenerated": 699,
+      "aiLinesGenerated": 17,
+      "interactionType": "code"
+    },
+    {
+      "sessionId": "session-1778224804248-51ymskvg1",
+      "startTime": 1778224804248,
+      "endTime": 1778225121733,
+      "duration": 317485,
+      "aiCharsGenerated": 401,
+      "aiLinesGenerated": 3,
+      "interactionType": "code"
+    },
+    {
+      "sessionId": "session-1778225233263-govnryg3v",
+      "startTime": 1778225233263,
+      "endTime": 1778225548282,
+      "duration": 315019,
+      "aiCharsGenerated": 291,
+      "aiLinesGenerated": 5,
+      "interactionType": "code"
+    },
+    {
+      "sessionId": "session-1778225594479-tadhnvcia",
+      "startTime": 1778225594479,
+      "endTime": 1778225894479,
+      "duration": 300000,
+      "aiCharsGenerated": 611,
+      "aiLinesGenerated": 15,
+      "interactionType": "code"
+    }
+  ],
+  "dailyStats": {
+    "2026-05-07": {
+      "date": "2026-05-07",
+      "totalActiveTime": 632668,
+      "aiCharsGenerated": 961,
+      "aiLinesGenerated": 33,
+      "sessionsCount": 2
+    },
+    "2026-05-08": {
+      "date": "2026-05-08",
+      "totalActiveTime": 2494793,
+      "aiCharsGenerated": 2299,
+      "aiLinesGenerated": 47,
+      "sessionsCount": 7
+    }
+  },
+  "productivityMetrics": {
+    "avgCharsPerMinute": 62.54274633640515,
+    "avgLinesPerMinute": 1.5347913211387767,
+    "peakCharsPerMinute": 160.70124178232285,
+    "peakTimeOfDay": "17:37",
+    "mostActiveDay": "2026-05-08",
+    "totalSessions": 9,
+    "avgSessionDuration": 347495.6666666667
+  },
+  "fileTimeStats": {
+    "/home/nc/repos/Script/android/ubuntu.md": {
+      "path": "/home/nc/repos/Script/android/ubuntu.md",
+      "totalActiveTime": 0,
+      "sessions": [
+        {
+          "sessionId": "session-1778123601265-gchwcsk0s",
+          "startTime": 1778123601265,
+          "endTime": 1778123901266,
+          "duration": 300001,
+          "aiCharsGenerated": 70,
+          "aiLinesGenerated": 4,
+          "interactionType": "code"
+        },
+        {
+          "sessionId": "session-1778150226959-iqbxpiqlr",
+          "startTime": 1778150226959,
+          "endTime": 1778150559626,
+          "duration": 332667,
+          "aiCharsGenerated": 891,
+          "aiLinesGenerated": 29,
+          "interactionType": "code"
+        },
+        {
+          "sessionId": "session-1778203409550-21iklhdie",
+          "startTime": 1778203409550,
+          "endTime": 1778203773671,
+          "duration": 364121,
+          "aiCharsGenerated": 223,
+          "aiLinesGenerated": 5,
+          "interactionType": "code"
+        },
+        {
+          "sessionId": "session-1778203811228-ux1rhu8oo",
+          "startTime": 1778203811228,
+          "endTime": 1778204111228,
+          "duration": 300000,
+          "aiCharsGenerated": 48,
+          "aiLinesGenerated": 1,
+          "interactionType": "code"
+        },
+        {
+          "sessionId": "session-1778205158218-6lkyk0n2k",
+          "startTime": 1778205158218,
+          "endTime": 1778205756386,
+          "duration": 598168,
+          "aiCharsGenerated": 699,
+          "aiLinesGenerated": 17,
+          "interactionType": "code"
+        },
+        {
+          "sessionId": "session-1778224804248-51ymskvg1",
+          "startTime": 1778224804248,
+          "endTime": 1778225121733,
+          "duration": 317485,
+          "aiCharsGenerated": 401,
+          "aiLinesGenerated": 3,
+          "interactionType": "code"
+        },
+        {
+          "sessionId": "session-1778225233263-govnryg3v",
+          "startTime": 1778225233263,
+          "endTime": 1778225548282,
+          "duration": 315019,
+          "aiCharsGenerated": 291,
+          "aiLinesGenerated": 5,
+          "interactionType": "code"
+        },
+        {
+          "sessionId": "session-1778225594479-tadhnvcia",
+          "startTime": 1778225594479,
+          "endTime": 1778225894479,
+          "duration": 300000,
+          "aiCharsGenerated": 611,
+          "aiLinesGenerated": 15,
+          "interactionType": "code"
+        }
+      ],
+      "lastActive": 1778225594479
+    },
+    "/home/nc/repos/Script/android/termux.md": {
+      "path": "/home/nc/repos/Script/android/termux.md",
+      "totalActiveTime": 0,
+      "sessions": [
+        {
+          "sessionId": "session-1778204173571-kmqi4lxs0",
+          "startTime": 1778204173571,
+          "endTime": 1778204473571,
+          "duration": 300000,
+          "aiCharsGenerated": 26,
+          "aiLinesGenerated": 1,
+          "interactionType": "code"
+        }
+      ],
+      "lastActive": 1778204173572
+    }
+  },
+  "lastSessionEndTime": 1778225894479
+}

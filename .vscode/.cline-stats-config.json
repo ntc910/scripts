@@ -1,0 +1,10 @@
+{
+  "resetStatsOnCommit": true,
+  "tagAiCommits": false,
+  "aiTagThreshold": 20,
+  "enableGitHook": true,
+  "enableLineTracking": true,
+  "lineTrackingMode": "on-demand",
+  "lineTrackingCacheEnabled": true,
+  "lineHistoryRetentionDays": 90
+}

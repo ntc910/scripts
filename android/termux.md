@@ -52,6 +52,9 @@ adb tcpip 5555
 ```
 
 # Start server if rooted
+
+pkg install android-tools
+
 ```sh
 su -c setprop service.adb.tcp.port 5555
 su -c stop adbd
@@ -81,3 +84,5 @@ net use P: "\\sshfs.r\u0_a370@localhost!2222\..\storage" persistent:yes
 
 sshfs -p 2222 u0_a370@localhost:/sdcard/Download ~/Phone
 
+# squid
+squid 

@@ -1,0 +1,21 @@
+{
+  "version": "1.2.11-1",
+  "installedAt": 1778203393040,
+  "hooks": {
+    "pre-commit": {
+      "originalExisted": false,
+      "wrapperInstalled": true,
+      "hookScriptPath": "/home/nc/.vscode-server/extensions/chungngv.cline-stats-extension-1.2.11-1/out/scripts/pre-commit.cjs"
+    },
+    "post-commit": {
+      "originalExisted": false,
+      "wrapperInstalled": true,
+      "hookScriptPath": "/home/nc/.vscode-server/extensions/chungngv.cline-stats-extension-1.2.11-1/out/scripts/post-commit.cjs"
+    },
+    "prepare-commit-msg": {
+      "originalExisted": false,
+      "wrapperInstalled": true,
+      "hookScriptPath": "/home/nc/.vscode-server/extensions/chungngv.cline-stats-extension-1.2.11-1/out/scripts/prepare-commit-msg.cjs"
+    }
+  }
+}
