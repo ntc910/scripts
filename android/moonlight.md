@@ -28,6 +28,22 @@ socat TCP-LISTEN:58001,fork,reuseaddr UDP:mcnc.vinaddns.com:48010 &
 wait
 ```
 
+```sh
+
+socat TCP-LISTEN:47984,fork,reuseaddr TCP:100.99.1.1:47984 &
+socat TCP-LISTEN:47989,fork,reuseaddr TCP:100.99.1.1:47989 &
+socat TCP-LISTEN:48010,fork,reuseaddr TCP:100.99.1.1:48010 &
+socat TCP-LISTEN:47990,fork,reuseaddr TCP:100.99.1.1:47990 &
+
+socat UDP-LISTEN:47998,fork,reuseaddr UDP:100.99.1.1:47998 &
+socat UDP-LISTEN:47999,fork,reuseaddr UDP:100.99.1.1:47999 &
+socat UDP-LISTEN:48000,fork,reuseaddr UDP:100.99.1.1:48000 &
+socat UDP-LISTEN:48010,fork,reuseaddr UDP:100.99.1.1:48010 &
+
+
+
+```
+
 # In the PC
 ```sh
 #!/bin/bash

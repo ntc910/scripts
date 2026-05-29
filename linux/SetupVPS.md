@@ -122,35 +122,35 @@ While:
 #### Setup port forwarding in VPS
 
 Install netfilter-persistent to save your config if VPS shutdown/ reboot:
-```
+```sh
 sudo apt install netfilter-persistent -y
 ```
 
 Install iptables-persistent
-```
+```sh
 sudo apt install iptables-persistent
 sudo iptables-save > /etc/iptables/rules.v4
 ```
 
 
 Enable port forward
-```
+```sh
 sudo nano /etc/sysctl.conf
 ```
 
 Remove # in this line
-```
+```sh
 net.ipv4.ip_forward=1
 ```
 Press Ctrl+O -> Enter to save then press Ctrl+X
 
 Apply
-```
+```sh
 sudo sysctl -p
 ```
 
 - Now forward a port to Host PC, in my case, I use port 9000:
-```
+```sh
 sudo iptables -t nat -A PREROUTING -p udp --dport 9000 -j DNAT --to-destination 100.64.0.3:9000
 ```
 
@@ -159,13 +159,14 @@ In here, "udp" is the protocol. Some case it will be "tcp"</br>
 "100.64.0.3" is the Host PC ip address used in Tailscale
 
 #### For Moonlight, you need to forward the following port:
-TCP 47984, 47989, 48010</br>
+TCP 47984, 47989, 47990, 48010</br>
 UDP 47998, 47999, 48000, 48002, 48010</br>
 
 - Simply use following command:
 ```sh
 sudo iptables -t nat -A PREROUTING -p tcp --dport 47984 -j DNAT --to-destination 100.64.0.3:47984
 sudo iptables -t nat -A PREROUTING -p tcp --dport 47989 -j DNAT --to-destination 100.64.0.3:47989
+sudo iptables -t nat -A PREROUTING -p tcp --dport 47990 -j DNAT --to-destination 100.64.0.3:47990
 sudo iptables -t nat -A PREROUTING -p tcp --dport 48010 -j DNAT --to-destination 100.64.0.3:48010
 
 sudo iptables -t nat -A PREROUTING -p udp --dport 47998 -j DNAT --to-destination 100.64.0.3:47998
@@ -176,11 +177,11 @@ sudo iptables -t nat -A PREROUTING -p udp --dport 48010 -j DNAT --to-destination
 ```
 ---
 - Save and reload the config
-```
+```sh
 sudo netfilter-persistent save && sudo netfilter-persistent reload
 ```
 - Check if rule exist:
-```
+```sh
 sudo iptables-save
 ```
 
