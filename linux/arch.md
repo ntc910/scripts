@@ -1,12 +1,7 @@
 # WSL
 
 ## temp set proxy
-export http_proxy="http://107.98.150.183:3333"
-export https_proxy="http://107.98.150.183:3333"
-export HTTP_PROXY="http://107.98.150.183:3333"
-export HTTPS_PROXY="http://107.98.150.183:3333"
-
-sudo tee /etc/environment << 'EOF'
+tee /etc/environment << 'EOF'
 http_proxy="http://107.98.150.183:3333"
 https_proxy="http://107.98.150.183:3333"
 HTTP_PROXY="http://107.98.150.183:3333"
@@ -15,14 +10,13 @@ no_proxy="localhost,127.0.0.1,localaddress,.samsung.net,.secsso.net,ipaas-mcp.se
 NO_PROXY="localhost,127.0.0.1,localaddress,.samsung.net,.secsso.net,ipaas-mcp.sec.samsung.net,.samsung.com,.samsungif.com"
 EOF
 
+source /etc/environnment
 
 ## Ignore ssl with http proxy
 sed -i 's|#XferCommand = /usr/bin/curl|XferCommand = /usr/bin/curl -k|' /etc/pacman.conf
 
-
-## run pacman with proxy add -E
-sudo -E pacman -S fish micro
-
+## run pacman
+pacman -Sy fish micro sudo 
 
 ## add user
 useradd -m -G wheel nc
@@ -39,21 +33,60 @@ chsh -s /usr/bin/fish # for root
 chsh -s /usr/bin/fish nc
 
 ## update
+su nc
 sudo pacman -Syu
 
-## proxy for fish
+## proxy for fish in config file
 set -gx http_proxy http://107.98.150.183:3333
 set -gx https_proxy http://107.98.150.183:3333
 set -gx all_proxy http://107.98.150.183:3333
-
-## AUR yay
 
 
 ## GPG proxy
 mkdir -p ~/.gnupg
 echo "http-proxy http://107.98.150.183:3333" >> ~/.gnupg/dirmngr.conf
-
 gpgconf --kill dirmngr
+
+## Custom pacman downloader
+micro /etc/pacman.conf
+
+```diff
+--XferCommand = /usr/bin/curl -k -L -C - -f -o %o %u
+++#XferCommand = /usr/bin/curl -k -L -C - -f -o %o %u
+
+
+--#Color
+--NoProgressBar
+++Color
+++#NoProgressBar
+++ILoveCandy
+```
+
+## Locale
+sudo locale-gen en_US.UTF-8
+sudo sed -i '/^#en_US.UTF-8 UTF-8/s/^#//' /etc/locale.gen
+sudo locale-gen
+
+## AUR yay
+<!-- sudo pacman -Syu ca-certificates ca-certificates-utils -->
+
+
+## Config fish
+```
+if status is-interactive
+    set -U fish_greeting ""
+    set -gx http_proxy http://107.98.150.183:3333
+    set -gx https_proxy http://107.98.150.183:3333
+    set -gx all_proxy http://107.98.150.183:3333
+    set -gx no_proxy "*.samsung.net,*.secsso.net,ipaas-mcp.sec.samsung.net,*.samsung.com,*.samsungif.com,107.0.0.0/8"
+
+    set -gx HTTP_PROXY $http_proxy
+    set -gx HTTPS_PROXY $https_proxy
+    set -gx ALL_PROXY $all_proxy
+    set -gx NO_PROXY $no_proxy
+
+    set -gx DONT_PROMPT_WSL_INSTALL 1
+```
 
 
 ## P4
@@ -61,13 +94,10 @@ yay -S p4
 yay -S p4v
 
 sudo pacman -S --needed nss libxi libxrender libxrandr libxcursor libxkbfile
-
-
-
 sudo pacman -S --needed mesa lib32-mesa vulkan-swrast
 
 
-# Fix GUI
+# Fix GUI WSLG
 
 1. must have prefix
 dbus-run-session nautilus
@@ -79,12 +109,14 @@ if status is-interactive
     set -gx http_proxy http://107.98.150.183:3333
     set -gx https_proxy http://107.98.150.183:3333
     set -gx all_proxy http://107.98.150.183:3333
-    set -gx no_proxy "*.samsung.net,*.secsso.net,ipaas-mcp.sec.samsung.net,*.samsung.com,*.samsungif.com"
+    set -gx no_proxy "*.samsung.net,*.secsso.net,ipaas-mcp.sec.samsung.net,*.samsung.com,*.samsungif.com,107.0.0.0/8"
 
     set -gx HTTP_PROXY $http_proxy
     set -gx HTTPS_PROXY $https_proxy
     set -gx ALL_PROXY $all_proxy
     set -gx NO_PROXY $no_proxy
+
+    set -gx DONT_PROMPT_WSL_INSTALL 1
 
     # GUI
     set -gx GALLIUM_DRIVER zink

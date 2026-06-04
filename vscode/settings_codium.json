@@ -1,0 +1,122 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "Dark Modern",
+    "window.zoomLevel": 1,
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 3000,
+    "editor.fontSize": 13,
+    // "editor.fontFamily": "Google Sans Mono",
+    "editor.guides.bracketPairs": true,
+    "editor.semanticTokenColorCustomizations": {
+        "rules": {
+            "keywords": {
+                "foreground": "#10b1fe",
+                "fontStyle": "italic"
+            },
+            "macro": {
+                "foreground": "#b1ee56",
+                "fontStyle": "italic"
+            },
+            "enumMember": "#a385ff",
+            "variable": "#d4d4d4",
+            "property": "#ce9887",
+            "memberOperatorOverload": "#d4d4d4",
+            "*.local": {
+                "foreground": "#d7d6a5",
+                //"fontStyle": "underline",
+            },
+            "parameter": "#8bcdef"
+        }
+    },
+    "editor.tokenColorCustomizations": {
+        "comments": "#858d9e",
+        "functions": "#44d675",
+        "keywords": {
+            //"foreground": "#10b1fe",
+            "fontStyle": "italic"
+        },
+        "numbers": "#ff78f8",
+        "strings": "#f9c859",
+        "types": "#ff6480",
+        "variables": "#d4d4d4",
+        "textMateRules": [
+            {
+                "scope": "keyword.operator.arithmetic",
+                "settings": {
+                    "foreground": "#d4d4d4",
+                }
+            },
+            {
+                "scope": "keyword.control.directive",
+                "settings": {
+                    "foreground": "#49f8c7",
+                    "fontStyle": "italic"
+                }
+            },
+            {
+                "scope": "entity.name.function.preprocessor",
+                "settings": {
+                    "foreground": "#b1ee56",
+                    "fontStyle": "italic"
+                },
+            },
+            {
+                "scope": [
+                    "constant.other.placeholder",
+                    "constant.language"
+                ],
+                "settings": {
+                    "foreground": "#9f7efe",
+                    "fontStyle": "italic"
+                },
+            },
+            {
+                "scope": "constant.character.escape",
+                "settings": {
+                    "foreground": "#ff936a",
+                    "fontStyle": "italic"
+                },
+            },
+            {
+                "scope": "keyword.other.unit",
+                "settings": {
+                    "foreground": "#f9c859",
+                    "fontStyle": "italic"
+                },
+            },
+            {
+                "scope": "constant.numeric.hexadecimal",
+                "settings": {
+                    "fontStyle": "italic"
+                },
+            },
+        ],
+    },
+    "workbench.colorCustomizations": {
+        "editorBracketHighlight.foreground1": "#92f535",
+        "editorBracketHighlight.foreground2": "#28e4eb",
+        "editorBracketHighlight.foreground3": "#ffa023",
+        "editorBracketHighlight.foreground4": "#00ff95",
+        "editorBracketHighlight.foreground5": "#ff78ff",
+        "editorBracketHighlight.foreground6": "#ffffff",
+    },
+    "http.proxy": "http://107.98.150.183:3333/",
+    "http.noProxy": [
+        ".samsung.net",
+        "107.0.0.0/8",
+        "10.0.0.0/8",
+        ".secsso.net",
+        ".samsungif.com",
+        ".samsung.com",
+        "ipaas-mcp.sec.samsung.net"
+    ],
+    "files.exclude": {
+        "**/.git": false,
+    },
+    "python.languageServer": "Default",
+    "yaml.schemas": {
+        "file:///d%3A/HQ_APKFiles/Programs/.vscodium/extensions/continue.continue-1.2.22-win32-x64/config-yaml-schema.json": [
+            ".continue/**/*.yaml"
+        ]
+    },
+}

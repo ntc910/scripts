@@ -1,0 +1,44 @@
+if status is-interactive
+    set -U fish_greeting ""
+    set -gx http_proxy http://107.98.150.183:3333
+    set -gx https_proxy http://107.98.150.183:3333
+    set -gx all_proxy http://107.98.150.183:3333
+    set -gx no_proxy "*.samsung.net,*.secsso.net,ipaas-mcp.sec.samsung.net,*.samsung.com,*.samsungif.com,107.0.0.0/8"
+
+    set -gx HTTP_PROXY $http_proxy
+    set -gx HTTPS_PROXY $https_proxy
+    set -gx ALL_PROXY $all_proxy
+    set -gx NO_PROXY $no_proxy
+
+    set -gx DONT_PROMPT_WSL_INSTALL 1
+
+    # GUI
+    set -gx XDG_RUNTIME_DIR /run/user/(id -u)
+
+    set -gx GDK_SCALE 1
+    set -gx GDK_DPI_SCALE 1
+    set -gx XDG_CURRENT_DESKTOP i3
+    set -gx GDK_BACKEND "x11"
+    set -gx XDG_SESSION_TYPE x11
+    set -gx DISPLAY :1
+
+    set -gx XCURSOR_THEME MacOS-Tahoe
+    set -gx XCURSOR_SIZE 24
+
+    # set -gx GALLIUM_DRIVER d3d12
+    # set -gx LIBVA_DRIVER_NAME d3d12
+    
+    set -gx GVFS_DISABLE_FUSE 1
+    set -gx GIO_USE_VFS local
+
+    # if test -S "$XDG_RUNTIME_DIR/bus"
+    #     set -gx DBUS_SESSION_BUS_ADDRESS "unix:path=$XDG_RUNTIME_DIR/bus"
+    # else if not set -q DBUS_SESSION_BUS_ADDRESS
+    #     eval (dbus-launch --sh-syntax | string replace -r '^([^=]+)=(.*); export .*' 'set -gx $1 $2')
+    # end
+
+    starship init fish | source
+end
+
+
+# alias codium='/mnt/d/HQ_APKFiles/Programs/VSCodium/bin/codium'
