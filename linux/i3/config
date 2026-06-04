@@ -50,7 +50,6 @@ tiling_drag modifier titlebar
 
 # start a terminal
 bindsym $mod+Return exec i3-sensible-terminal
-# bindsym $mod+Return exec alacritty
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -190,11 +189,7 @@ bar {
         status_command i3status
 }
 
-# Wallpaper
-exec_always feh --bg-fill /home/nc/Downloads/wallpaper.jpg
-
-# Shortcut for Lockscreen
-bindsym $mod+x exec /home/$USER/.config/scripts/lock
-
-# Transparency with picom compositor
-# exec_always picom -f
+###############################################################################
+#for_window [class="^.*"] border pixel 1
+#new_window pixel 1
+default_border pixel 3
