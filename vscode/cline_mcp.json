@@ -1,0 +1,32 @@
+{
+  "mcpServers": {
+    "plm": {
+      "autoApprove": [
+        "get_defect_info",
+        "get_defects_by_user",
+        "get_mcp_info"
+      ],
+      "disabled": false,
+      "timeout": 60,
+      "type": "streamableHttp",
+      "url": "https://ipaas-mcp.sec.samsung.net/sec/kr/mcp_plm_001/1.0/plmmcp",
+      "headers": {
+        "PLM_USER_ID": "cuong.nguyen",
+        "PLM_USER_DIVISION": "25",
+        "PLM_USER_LANG": "KO"
+      }
+    },
+    "CODEGrok-ipaas": {
+      "autoApprove": [
+        "codegrok_get_most_accessed_path"
+      ],
+      "disabled": true,
+      "timeout": 60,
+      "type": "streamableHttp",
+      "url": "https://ipaas-sca.sec.samsung.net/sec/kr/codegrok-mcp/1.0/mcp",
+      "headers": {
+        "iPaaS-Backend-Authorization": "Bearer ${CODEGROK_TOKEN}"
+      }
+    }
+  }
+}

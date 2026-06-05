@@ -10,7 +10,7 @@ no_proxy="localhost,127.0.0.1,localaddress,.samsung.net,.secsso.net,ipaas-mcp.se
 NO_PROXY="localhost,127.0.0.1,localaddress,.samsung.net,.secsso.net,ipaas-mcp.sec.samsung.net,.samsung.com,.samsungif.com"
 EOF
 
-source /etc/environnment
+source /etc/environment
 
 ## Ignore ssl with http proxy
 sed -i 's|#XferCommand = /usr/bin/curl|XferCommand = /usr/bin/curl -k|' /etc/pacman.conf
@@ -69,7 +69,12 @@ sudo locale-gen
 
 ## AUR yay
 <!-- sudo pacman -Syu ca-certificates ca-certificates-utils -->
+git clone https://aur.archlinux.org/yay.git
+cd yay
+makepkg -si
 
+## Turbo VNC
+yay -S turbovnc
 
 ## Config fish
 ```
