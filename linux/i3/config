@@ -189,9 +189,10 @@ bindsym $mod+r mode "resize"
 #        status_command i3status
 #}
 
-exec_always --no-startup-id ~/.config/polybar/launch.sh
-
 ###############################################################################
-#for_window [class="^.*"] border pixel 1
+
+fake-outputs 1920x1080+0+0,1920x1080+1920+0
+exec_always --no-startup-id ~/.config/polybar/launch.sh
+for_window [class="^.*"] border pixel 1
 #new_window pixel 1
-default_border pixel 3
+default_border pixel 2
